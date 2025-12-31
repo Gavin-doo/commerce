@@ -1,4 +1,4 @@
-from rest_framework_simplejwt import serializers
+from rest_framework import serializers
 from .models import Products
 
 class ProductsSerializer(serializers.ModelSerializer):
