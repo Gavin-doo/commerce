@@ -8,6 +8,8 @@ class ProductsAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
     list_filter = ('created_at', 'updated_at')
 
+    
+
 admin.site.register(Products)
 
 
