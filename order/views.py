@@ -40,7 +40,7 @@ class OrderCreateView(generics.CreateAPIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def get(self, request, *args, **kwargs):
-        print("LOG : Product list called from conflict-test-1")
+        print("DEBUG : Product LOG conflict-test-1")
     
 
 class OrderListView(generics.ListAPIView):
