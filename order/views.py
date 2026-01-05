@@ -11,6 +11,7 @@ from . serializers import OrderSerializer
 class OrderCreateView(generics.CreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
+    get_queryset = Order.objects.all()
 
     def create(self, request, *args, **kwargs):
         
@@ -37,6 +38,9 @@ class OrderCreateView(generics.CreateAPIView):
 
         serializer = self.get_serializer(order)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def get(self, request, *args, **kwargs):
+        print("LOG : Product list called from conflict-test-1")
     
 
 class OrderListView(generics.ListAPIView):
