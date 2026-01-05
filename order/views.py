@@ -41,6 +41,7 @@ class OrderCreateView(generics.CreateAPIView):
     
     def get(self, request, *args, **kwargs):
         print("LOG : Product list called from conflict-test-1")
+        return super().get(request, *args, **kwargs)
     
 
 class OrderListView(generics.ListAPIView):
